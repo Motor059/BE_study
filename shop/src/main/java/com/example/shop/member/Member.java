@@ -1,5 +1,8 @@
 package com.example.shop.member;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,11 +12,13 @@ import lombok.Setter;
  * - 온라인 쇼핑몰의 회원 정보를 담는 엔티티
  * - 아직 JPA를 배우지 않았으므로 순수 자바 클래스로 작성
  */
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 public class Member {
-
+    @Id
+    @GeneratedValue
     // 회원 고유 식별자
     private Long id;
 
