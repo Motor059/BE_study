@@ -3,9 +3,9 @@ package com.example.shop.member;
 
 import com.example.shop.member.dto.MemberCreateRequest;
 import com.example.shop.member.dto.MemberUpdateRequest;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -25,7 +25,8 @@ public class MemberService {
                 request.getLoginId(),
                 request.getPassword(),
                 request.getPhoneNumber(),
-                request.getAddress()
+                request.getAddress(),
+                0
         );
 
         memberRepository.save(member);
