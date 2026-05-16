@@ -1,4 +1,4 @@
-package com.example.shop.member;
+package com.example.shop.member.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -43,5 +43,8 @@ public class Member {
             this.phoneNumber = phoneNumber;
         if (password != null)
             this.address = address;
+    }
+    public void setId(Long id){
+        this.id = id;
     }
 }

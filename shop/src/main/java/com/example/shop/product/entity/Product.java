@@ -1,7 +1,6 @@
-package com.example.shop.product;
+package com.example.shop.product.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
