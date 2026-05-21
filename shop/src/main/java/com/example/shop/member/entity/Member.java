@@ -9,12 +9,13 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 public class Member {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
     private Long id;
 
-    @Column(name = "member_login_id", length = 50)
+    @Column(name = "member_login_id", length = 20)
     private String loginId;
 
     @Column(name = "member_pw", length = 100)
@@ -37,14 +38,9 @@ public class Member {
         this.point = 0;
     }
     public void updateInfo(String password, String phoneNumber, String address){
-        if (password != null)
-            this.password = password;
-        if (password != null)
-            this.phoneNumber = phoneNumber;
-        if (password != null)
-            this.address = address;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
     }
-    public void setId(Long id){
-        this.id = id;
-    }
+    public void setId(Long id) {this.id = id;}
 }

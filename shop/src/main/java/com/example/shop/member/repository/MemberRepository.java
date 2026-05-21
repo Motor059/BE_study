@@ -4,7 +4,7 @@ import com.example.shop.member.entity.Member;
 
 import java.util.List;
 
-public class MemberRepository {
+public interface MemberRepository {
     Member findById(Long id);
     List<Member> findAll();
     Member findByLoginId(String loginId);
